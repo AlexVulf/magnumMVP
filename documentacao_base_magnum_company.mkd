@@ -1,0 +1,51 @@
+# 🧠 Documentação Base do Projeto — Magnum Company (SaaS com IA)
+
+O projeto Magnum Company é um sistema SaaS com foco em **serviços de criação e vetorização de imagens com IA**.
+Ele é composto por **duas áreas principais**:
+- Área do Usuário: interface para criação e vetorização de imagens (via Gemini API).
+- Área do Administrador: gestão de usuários, permissões e status.
+A aplicação será hospedada integralmente na HostGator, incluindo site, backend, banco de dados e automações com n8n.
+
+
+# ⚙️ 2. Estrutura Tecnológica
+
+Frontend:
+- React (com Vite e TailwindCSS)
+- React Router DOM
+- Zustand
+- Hospedagem: HostGator (VPS) / Vercel (testes)
+
+Backend:
+- Node.js + Express
+- JWT, Zod/Joi, Prisma
+- Banco: MySQL (HostGator)
+- Integração: n8n (Webhooks)
+- Hospedagem: HostGator VPS
+
+
+# 🧮 Banco de Dados
+
+Tipo: MySQL (HostGator)
+Tabelas principais: usuarios, logs, imagens_geradas, imagens_vetorizadas, permissoes
+Backup: Automático via HostGator + script diário do n8n
+
+
+# ⚡ n8n (Automação)
+
+Hospedagem: HostGator VPS (subdomínio: n8n.magnumeco.com.br)
+Funções:
+- Processar requisições de automação da IA (via webhooks HTTP)
+- Registrar logs de atividade dos usuários
+- Automatizar backups e notificações do sistema
+
+
+# 🤖 IA (Gemini)
+
+Modelo: Google Gemini API
+Motivo: Alta performance multimodal + compatibilidade com NanoBanana
+Integração: Backend Node.js envia prompt e recebe imagem (base64 ou URL)
+Casos de uso:
+- Criação de imagens via prompt
+- Vetorização de imagens enviadas pelo usuário
+
+
