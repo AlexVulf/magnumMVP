@@ -42,7 +42,7 @@ const Login = () => {
               placeholder="Email"
               value={form.email}
               onChange={handleChange}
-              className="w-full bg-transparent border border-white/50 rounded-lg p-1 !text-white mb-3 outline-none placeholder-[#ccc] focus:border-white focus:ring-2 focus:ring-white/50 autofill:shadow-[inset_0_0_0px_1000px_rgb(10,7,8)] autofill:!text-white"
+              className="w-full bg-transparent border border-white/50 rounded-lg p-1 text-white mb-3 outline-none placeholder-[#ccc] focus:border-white focus:ring-2 focus:ring-white/50"
             />
 
             <input
@@ -51,7 +51,7 @@ const Login = () => {
               placeholder="Senha"
               value={form.password}
               onChange={handleChange}
-              className="w-full bg-transparent border border-white/50 rounded-lg p-1 !text-white mb-3 outline-none placeholder-[#ccc] focus:border-white focus:ring-2 focus:ring-white/50 autofill:shadow-[inset_0_0_0px_1000px_rgb(10,7,8)] autofill:!text-white"
+              className="w-full bg-transparent border border-white/50 rounded-lg p-1 text-white mb-3 outline-none placeholder-[#ccc] focus:border-white focus:ring-2 focus:ring-white/50"
             />
 
             <button

@@ -4,6 +4,7 @@ import Login from './pages/Login';
 import Admin from './pages/Admin';
 import Usuario from './pages/Usuario';
 import Register from './pages/Register';
+import Produto from './pages/Produto'; // Importar o novo componente
 import ProtectedRoute from './components/ProtectedRoute';
 import useAuth from './hooks/useAuth';
 
@@ -28,6 +29,7 @@ const App = () => {
           <>
             {userRole === 'ADMIN' && <Link to='/admin'>Admin</Link>}
             <Link to='/usuario'>Usuário</Link>
+            <Link to='/produto'>Produto</Link> {/* Adicionar link para Produto */}
             <button onClick={handleLogout}>Logout</button>
           </>
         )}
@@ -39,6 +41,7 @@ const App = () => {
           <Route path='/register' element={<Register />} />
           <Route element={<ProtectedRoute />}>
             <Route path='/usuario' element={<Usuario />} />
+            <Route path='/produto' element={<Produto />} /> {/* Adicionar rota para Produto */}
           </Route>
           <Route element={<ProtectedRoute adminOnly={true} />}>
             <Route path='/admin' element={<Admin />} />

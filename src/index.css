@@ -1,11 +1,12 @@
 @import "tailwindcss";
 
-/* Força a cor do texto para branco em campos de input com autofill */
+/* For�a a cor do texto no autofill do Chrome/WebKit */
 input:-webkit-autofill,
-input:-webkit-autofill:hover,
+input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-    -webkit-text-fill-color: #ffffff !important;
-    background-color: transparent !important; /* Força o fundo transparente */
-    transition: background-color 50000s ease-in-out 0s; /* Truque para manter o background transparente */
+    -webkit-text-fill-color: white !important;
+    -webkit-box-shadow: 0 0 0px 1000px #0a0708 inset !important;
+    transition: background-color 5000s ease-in-out 0s;
 }
+
